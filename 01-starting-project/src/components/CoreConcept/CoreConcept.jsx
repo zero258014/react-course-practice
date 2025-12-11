@@ -1,3 +1,5 @@
+import "./CoreConcept.css";
+
 // 引数はpropsを使ってもいいですし、{key}の形で使ってもいいです。
 export default function CoreConcept({ title, description, image }) {
   return (
