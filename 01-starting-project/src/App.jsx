@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { CORE_CONCEPTS } from "./data.js";
+import { CORE_CONCEPTS, EXAMPLES } from "./data-with-examples.js";
 import Header from "./components/Header/Header.jsx";
 import CoreConcept from "./components/CoreConcept/CoreConcept.jsx";
 import TabButton from "./components/TabButton/TabButton.jsx";
 
 function App() {
-  const [tab, setTab] = useState("default content.");
+  const [tab, setTab] = useState();
   function handleChangeTab(selectedTab) {
     setTab(selectedTab);
-    console.log(tab);
+    // console.log(tab);
   }
 
   return (
@@ -33,18 +33,27 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton changeTab={() => handleChangeTab("Components")}>
+            <TabButton changeTab={() => handleChangeTab("components")}>
               Components
             </TabButton>
-            <TabButton changeTab={() => handleChangeTab("JSX")}>JSX</TabButton>
-            <TabButton changeTab={() => handleChangeTab("Props")}>
+            <TabButton changeTab={() => handleChangeTab("jsx")}>JSX</TabButton>
+            <TabButton changeTab={() => handleChangeTab("props")}>
               Props
             </TabButton>
-            <TabButton changeTab={() => handleChangeTab("State")}>
+            <TabButton changeTab={() => handleChangeTab("state")}>
               State
             </TabButton>
           </menu>
-          {tab}
+          {!tab ? <p>Please select a topic.</p> : null}
+          {tab ? (
+            <div id="tab-content">
+              <h3>{EXAMPLES[tab].title}</h3>
+              <p>{EXAMPLES[tab].description}</p>
+              <pre>
+                <code>{EXAMPLES[tab].code}</code>
+              </pre>
+            </div>
+          ) : null}
         </section>
       </main>
     </div>
