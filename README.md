@@ -30,41 +30,33 @@ React のコンポーネント、ステート管理、Hooks、ルーティング
 
 🧩 Components（コンポーネント）
 
-EN
 Components are the core building blocks of React applications.
 I learned how to create reusable and independent components to split the UI into smaller, manageable pieces.
 
-JP
 コンポーネントは React アプリケーションの基本単位です。
 UI を小さく再利用可能な部品に分割し、保守しやすい構造で開発する方法を学びました。
 
 ✨ JSX
 
-EN
 JSX allows writing HTML-like syntax inside JavaScript.
 I learned how JSX is transformed into JavaScript and how to dynamically render content using expressions.
 
-JP
 JSX は JavaScript の中で HTML のような構文を書ける仕組みです。
 JSX がどのように JavaScript に変換されるか、また動的な値の表示方法を理解しました。
 
 📦 Props
 
-EN
 Props are used to pass data from parent components to child components.
 I learned how props enable component reusability and one-way data flow in React.
 
-JP
 Props は親コンポーネントから子コンポーネントへデータを渡すための仕組みです。
 一方向のデータフローと、コンポーネントの再利用性について学びました。
 
 🔄 State
 
-EN
 State is used to manage dynamic data inside a component.
 I learned how state changes trigger re-rendering and how to update state using React hooks such as useState.
 
-JP
 State はコンポーネント内部で動的なデータを管理するために使用されます。
 State の変更によって再レンダリングが行われる仕組みや、useState を使った更新方法を学びました。
 
