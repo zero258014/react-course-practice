@@ -18,16 +18,11 @@ function App() {
         <section id="core-concepts">
           <h2>Core Concepts</h2>
           <ul>
-            {/* オブジェクトのkeyを指定して使う */}
-            <CoreConcept
-              title={CORE_CONCEPTS[0].title}
-              description={CORE_CONCEPTS[0].description}
-              image={CORE_CONCEPTS[0].image}
-            />
-            {/* オブジェクトを全部展開してCoreConceptのcomponentに渡して使う */}
-            <CoreConcept {...CORE_CONCEPTS[1]} />
-            <CoreConcept {...CORE_CONCEPTS[2]} />
-            <CoreConcept {...CORE_CONCEPTS[3]} />
+            {/*アロー関数の中に"()"で囲む場合はexpressionは一行ですが、改行したい時。
+            "{}"で囲む場合は複数のexpressionがあるかつreturnを書く必要がある。 */}
+            {CORE_CONCEPTS.map((conceptItem) => (
+              <CoreConcept key={conceptItem.title} {...conceptItem} />
+            ))}
           </ul>
         </section>
         <section id="examples">
