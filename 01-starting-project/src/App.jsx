@@ -1,57 +1,16 @@
-import { useState } from "react";
-import { CORE_CONCEPTS, EXAMPLES } from "./data-with-examples.js";
 import Header from "./components/Header/Header.jsx";
-import CoreConcept from "./components/CoreConcept/CoreConcept.jsx";
-import TabButton from "./components/TabButton/TabButton.jsx";
+import CoreConcepts from "./components/CoreConcept/CoreConcepts.jsx";
+import Examples from "./components/Examples/Examples.jsx";
 
 function App() {
-  const [tab, setTab] = useState();
-  function handleChangeTab(selectedTab) {
-    setTab(selectedTab);
-    // console.log(tab);
-  }
-
   return (
-    <div>
+    <>
       <Header />
       <main>
-        <section id="core-concepts">
-          <h2>Core Concepts</h2>
-          <ul>
-            {/*アロー関数の中に"()"で囲む場合はexpressionは一行ですが、改行したい時。
-            "{}"で囲む場合は複数のexpressionがあるかつreturnを書く必要がある。 */}
-            {CORE_CONCEPTS.map((conceptItem) => (
-              <CoreConcept key={conceptItem.title} {...conceptItem} />
-            ))}
-          </ul>
-        </section>
-        <section id="examples">
-          <h2>Examples</h2>
-          <menu>
-            <TabButton changeTab={() => handleChangeTab("components")}>
-              Components
-            </TabButton>
-            <TabButton changeTab={() => handleChangeTab("jsx")}>JSX</TabButton>
-            <TabButton changeTab={() => handleChangeTab("props")}>
-              Props
-            </TabButton>
-            <TabButton changeTab={() => handleChangeTab("state")}>
-              State
-            </TabButton>
-          </menu>
-          {!tab ? <p>Please select a topic.</p> : null}
-          {tab ? (
-            <div id="tab-content">
-              <h3>{EXAMPLES[tab].title}</h3>
-              <p>{EXAMPLES[tab].description}</p>
-              <pre>
-                <code>{EXAMPLES[tab].code}</code>
-              </pre>
-            </div>
-          ) : null}
-        </section>
+        <CoreConcepts />
+        <Examples />
       </main>
-    </div>
+    </>
   );
 }
 
