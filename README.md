@@ -26,7 +26,7 @@ React のコンポーネント、ステート管理、Hooks、ルーティング
 
 ---
 
-## 🔰 React Fundamentals Learned / React 基礎學習內容
+## 🔰 01 React Fundamentals Learned / React 基礎學習內容
 
 🧩 Components（コンポーネント）
 
@@ -59,6 +59,14 @@ I learned how state changes trigger re-rendering and how to update state using R
 
 State はコンポーネント内部で動的なデータを管理するために使用されます。
 State の変更によって再レンダリングが行われる仕組みや、useState を使った更新方法を学びました。
+
+Here is a screenshot of my first completed React page:
+
+### 🖼 First Lesson Preview ‒ 第一課完成畫面
+
+Here’s a screenshot of my completed React “01-starting-project” page:
+
+![React First Lesson](screenshots/01-starting-project.png)
 
 ---
 
